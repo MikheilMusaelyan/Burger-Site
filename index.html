@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Bar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div class="main">
+        <div class="nav-container">
+            <nav class="navbar">
+                <ul class="nav-ul">
+                    <li class="nav-li"><a style="color: white;" class="nav-a">Home</a></li>
+                    <li class="nav-li"><a class="nav-a">Menu</a></li>
+                    <li class="nav-li"><a class="nav-a">About</a></li>
+                    <li class="nav-li"><a class="nav-a">Contact</a></li>
+                </ul>
+                <div class="nav-x" onclick="hideNav(this)">
+                    <i class="fa-solid fa-circle-xmark nav-i"></i>
+                </div>
+            </nav>
+        </div>
+        
+        <div class="home m">
+            <div class="main-container-1">
+                <div class="mini-container">
+                    <p class="top3">3 new burgers</p>
+                    <div class="burger1 burger">
+                        <img class="img image1" src="images/burger1.png" alt="">
+                    </div>
+                    <div class="burger2 burger">
+                        <img class="img image2" src="images/burger2.png" alt="">
+                    </div>
+                    <div class="burger3 burger">
+                        <img class="img image3" src="images/burger3.png">
+                    </div>
+                </div>
+
+                <div class="homeText">
+                    <div class="mainHomeTextWrapper">
+                    <div class="homeTextWrapper">
+                        <p class="home-p">Meat monster</p>
+                        <span class="home-span">Double cheeseburger with crispy bacon,
+                            fresh juicy ground beef and barbecue sauce</span>
+                    </div>
+
+                    <div class="homeTextWrapper">
+                        <p class="home-p">Kingburger</p>
+                        <span class="home-span">Amazing fried chicken strips and ground beef 
+                            with vegitables and a secret sauce</span>
+                    </div>
+
+                    <div class="homeTextWrapper">
+                        <p class="home-p">Black boss</p>
+                        <span class="home-span">New black burger with chicken, onions,
+                            lettuce and ketchup, topped with sesame seeds</span>
+                    </div>
+                    </div>
+                    <div class="button-cont-1">
+                        <button class="home-button-1"><a href="#menu">Go to menu</a></button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    <div class="menu m">
+        <div class="real-main-menu">
+
+            <div class="choose-main">
+                <div class="choose">
+                    <ul class="choose-ul">
+                        <li class="choose-li choose-menu">MENU</li>
+                        <li class="choose-li lis"><div class="choose-i-wrap"><i class="choose-i fa-solid fa-burger"></i></div> <span class="choose-span">Burgers</span></li>
+                        <li class="choose-li lis"><div class="choose-i-wrap"><i class="choose-i fa-solid fa-hotdog"></i></div> <span class="choose-span">Chicken burgers</span></li>
+                        <li class="choose-li lis"><div class="choose-i-wrap"><i class="choose-i fa-solid fa-0"></i></div> <span class="choose-span">Soft drinks</span></li>
+                        <li class="choose-li lis"><div class="choose-i-wrap"><i class="choose-i fa-solid fa-ice-cream"></i></div> <span class="choose-span">Sides</span></li>
+                        <li class="choose-li lis"><div class="choose-i-wrap"><i class="choose-i fa-solid fa-cake-candles"></i></div> <span class="choose-span">Desserts</span></li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <input class="search-input" type="text" placeholder="Find product">
+                    <div class="search-i-wrap"><i class="fa-solid fa-magnifying-glass"></i></div>
+                </div>
+            </div>
+            <div class="arrows none">
+                <div class="arrow arrow-left">
+                    <i class="arrow-i fa-solid fa-arrow-left-long" onclick="left()"></i>
+                </div>
+                <div class="arrow arrow-right">
+                    <i class="arrow-i fa-solid fa-arrow-right-long" onclick="right()"></i>
+                </div>
+            </div>
+
+        <div class="main-menu"></div>
+
+            <div class="my-order-main">
+                <div class="x-OM" onclick="hidexOM()">
+                    <i class="fa-solid fa-circle-xmark in-x-OM none"></i>
+                    <p class="see-order none">MY ORDER</p>
+                </div>
+                <div class="my-order-top">
+                    <div class="my-order-wrap">
+                        <h1 class="my-order">MY ORDER</h1>
+                    </div>
+                </div>
+                <div class="my-order-bottom">
+                    <div class="final-price-wrap">
+                        <span class="final-price">$0</span>
+                        <button class="confirm">
+                            <span class="confirm-span pointerEvents">Nothing ordered yet</span>
+                        </button>
+                        <button class="change-order-btn none" onclick="changeOrder(this)" data-clicked="false">
+                            <span class="change-span">Edit order</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+        <div class="about m">
+            <i class="fa-solid fa-burger abs-burger abs-1" data-rotate="-15"></i>
+            <i class="fa-solid fa-burger abs-burger abs-2" data-rotate="15"></i>
+            <i class="fa-solid fa-burger abs-burger abs-3" data-rotate="7"></i>
+
+            <div class="about-main">
+                <div class="about-txt">
+                    <div class="par-txt-wrap">
+                        <div class="par-txt par-1">
+                            <span class="par-span par-span-1">ABOUT US</span>
+                        </div>
+                        <div class="par-txt par-2">
+                            <span class="par-span par-span-2">ABOUT US</span>
+                        </div>
+                    </div>
+                    <span class="about-span">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Exercitationem nulla illo omnis iure, sed deleniti et dicta 
+                        autem, culpa tempore perspiciatis maiores cum dolor labore,
+                        Maiores aliquid illo aliquam eligendi,nulla illo omnis iure, sed deleniti et dicta
+                        autem.
+                    </span>
+                    <div class="about-img">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://i.pinimg.com/originals/7d/46/c9/7d46c93da36766b080d4a65dc3917df3.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://www.miss.at/wp-content/uploads/2021/04/Gratis-Burger-in-Wien-mit-Kaertner-Dialekt-bestellen-1536x1024.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://s3.amazonaws.com/rpower-marketing-assets/Public%2Frpower-blog-photos%2Fsystem-kitchen-display-cooking-resized.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev c-c" type="button" data-target="#carouselExampleControls" data-slide="prev">
+                                <span class="carousel-control-prev-icon slide-control" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </button>
+                            <button class="carousel-control-next c-c" type="button" data-target="#carouselExampleControls" data-slide="next">
+                                <span class="carousel-control-next-icon slide-control" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <footer class="contact m">
+            <div class="contact-main">
+
+                <div class="footer-nav footer-nav-1 footer-c">
+                    <ul class="opening-hours-wrap">
+                        <li class="opening-hours opening-hours-text">WORKING HOURS</li>
+                        <li class="opening-hours">Monday ... 09:00 - 22:00</li>
+                        <li class="opening-hours">Tuesday ... 09:00 - 22:00</li>
+                        <li class="opening-hours">Wednesday ... 09:00 - 22:00</li>
+                        <li class="opening-hours">Thursday ... 09:00 - 22:00</li>
+                        <li class="opening-hours">Friday ... 09:00 - 00:00</li>
+                        <li class="opening-hours">Saturday ... 09:00 - 00:00</li>
+                        <li class="opening-hours">Sunday ... 09:30 - 18:00</li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav footer-nav-2 footer-c">
+                    <ul class="footer-ul">
+                        <li class="footer-li page">PAGE</li>
+                        <div class="page-lis">
+                            <li class="footer-li pages">home</li>
+                            <li class="footer-li pages">menu</li>
+                            <li class="footer-li pages">about</li>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="footer-nav footer-nav-2 footer-c">
+                    <ul class="footer-ul">
+                        <li class="footer-li page">Contact</li>
+                        <div class="page-lis">
+                            <li class="footer-li pages">
+                                <a class="footer-li-a" href="https://twitter.com/MMusaeliani" target="_blank">
+                                    <i class="fa-brands fa-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                            </li>
+
+                            <li class="footer-li pages">
+                                <a class="footer-li-a" href="https://www.facebook.com/mishka.musaeliani" target="_blank">
+                                    <i class="fa-brands fa-facebook"></i>
+                                    <span>Facebook</span>
+                                </a>
+                            </li>
+
+                            <li class="footer-li pages">
+                                <a class="footer-li-a" href="https://www.linkedin.com/in/mikheil-musaelyan-575a53252/" target="_blank">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <span>Linkedin</span>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+
+            </div>
+        </footer>
+
+        <div class="abs none"></div>
+    </div>
+
+    <script src="script.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+</body>
+</html>
